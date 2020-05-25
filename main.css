@@ -86,24 +86,23 @@ body, footer{
 footer{
     bottom: 0;
     font-size: 10pt;
-    margin: 0 auto;
-    /* height: 35px; */
     position: fixed;
     background-color: #f2f2f2;
     z-index: 104;
     width: 100%;
+    margin: 0;
 }
-.top-footer, .bottom-footer{
+.bottom-footer{
     display: block;
     width: 100%;
+    text-align: left;
 }
 .top-footer p{
-    margin-left: 50px;
+    margin-left: 15px;
     color: rgba(0,0,0,0.87);
 }
 .bottom-footer{
     border-top: 1px solid #e4e4e4;
-    text-align: left;
     width: 100%;
 }
 .lang{
@@ -120,10 +119,12 @@ footer{
 footer ul > li{
     display: inline;
     line-height: 24px;
-    margin:0px 5px;
+    margin:0px 0px;
+    text-align: left;
 }
 .bottom-footer > .left{
     float: left;
+    margin-left: -22px;
 }
 
 .bottom-footer > .right{
@@ -133,4 +134,70 @@ footer ul > li{
 footer ul > li a{
     text-decoration: none;
     color: rgba(0,0,0,0.87);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  main div > a {
+    margin-left:-10%;
+    margin-bottom: 20px;
+}
+  form input[type=text]{
+    background-color:#ffffff;
+    border: 1px solid #dfe1e5;
+    padding:15px;
+    width: 200px;
+    border-radius: 24px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 6px;
+}
+
+main{
+    position: absolute;
+    top:25%;
+    left: 22%;
+}
+form input[type=button]{
+    position: relative;
+    left: 8%; 
+    top:20px;
+    padding: 10px;
+    width: 100px;
+    background-color: #f2f2f2;
+    border:2px solid #f2f2f2;
+    border-radius: 4px;
+    font-size: 8pt;
+}
+footer ul > li a{
+    font-size: 5pt;
+}
+footer ul > li{
+    display: inline;
+    line-height: 24px;
+    margin:0px 1px;
+}
+.lang a{
+    margin:0 0px;
+    color: #1a0dab;
+    font-size: 5pt;
+}
+
+.top-footer p{
+    color: rgba(0,0,0,0.87);
+    font-size: 5pt;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  main{
+    position: absolute;
+    top:25%;
+    left: 22%;
+}
+footer a, footer p{
+    font-size: 22px;
+    margin: 0, 5px;
+}
 }
